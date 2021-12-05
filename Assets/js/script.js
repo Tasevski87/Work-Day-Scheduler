@@ -1,4 +1,4 @@
-//Imoment.js to pull the curent time, day and year
+//moment.js to pull the curent time, day and year
 var date = moment().format('dddd, MMMM Do, YYYY')
 $('#currentDay').text(date)
 
