@@ -1,9 +1,13 @@
+//Imoment.js to pull the curent time, day and year
 var date = moment().format('dddd, MMMM Do, YYYY')
 $('#currentDay').text(date)
 
 var currentHour = moment().hours()
 var timeBlock = $('.time-block')
 
+/*created a function to set color who is going to represent
+past time(gray) curent time (red) and future(green)
+*/
 setColor()
 
 function setColor() {
@@ -22,7 +26,7 @@ function setColor() {
         }
     })
 }
-
+// function that alows entering and saving text in local storage
 getTask()
 
 $('.saveBtn').on('click', function(event) {
@@ -33,7 +37,7 @@ $('.saveBtn').on('click', function(event) {
     localStorage.setItem(id, task)
     getTask()
 })
-
+//functions that pull saved info from local storage
 function getTask() {
     for(var i = 9; i < 18; i++) {
         var currentTask = localStorage.getItem(i)
